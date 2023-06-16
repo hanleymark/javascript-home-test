@@ -60,9 +60,7 @@ function assertEquals(expect, actual) {
     // >1 array elements do not match. Throw error with message containing list of errors up to MAX_ERRORS
     if (elementsNotEqual.length > 0) {
       throw new Error(
-        elementsNotEqual.length === 1
-          ? elementsNotEqual
-          : elementsNotEqual.slice(0, MAX_ERRORS).join(', ')
+        elementsNotEqual.slice(0, MAX_ERRORS).join(', ')
       );
     }
   }
